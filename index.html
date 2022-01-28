@@ -4,19 +4,28 @@
   <title>Web App-Simple Interest Calculator</title>
 
   <head>
+      <!--The sources for the JS code and the CSS-->
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
-    <div class="maindiv">
+    <div class="maindiv"><!--Used for CSS styling-->
       <h1>Simple Interest Calculator</h1>
+      <!--Created a div class called content for CSS styling-->
       <div class="content">
+        
+        <!--Principal field-->
         <label>Amount</label> <input type="number" id="principal"> <br />
+        
+        <!--Interest rate field as a slider. JS code "onchange" used to display a different interest rate when the slider is moved-->
         <label>Rate</label> <input type="range" id="rate" min="1" max="20" step="0.25" value="10.25" onchange="updateRate()">
+        <!--Displays the interest rate with default as 10.25%-->
         <span id="rate_val">
           10.25%
         </span> <br />
+        
+        <!--Creates a dropdown for the number of years-->
         <label>No. of Years</label> <select id="years">
           <option value="1">1</option>
           <option value="2">2</option>
@@ -29,6 +38,8 @@
           <option value="9">9</option>
           <option value="10">10</option>
         </select> <br />
+        
+        <!--This displays the result using the "onclick" JS function-->
         <span id="result">
         </span><br>
 
